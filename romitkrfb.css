@@ -220,7 +220,14 @@ button {
 .nav-desktop {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.35rem, 0.8vw, 0.75rem);
+}
+
+.nav-desktop .nav-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.55rem;
 }
 
 .nav-link {
@@ -1932,6 +1939,12 @@ button {
 /* Utilities */
 .hidden { display: none !important; }
 .text-center { text-align: center; }
+
+/* Keep the full navigation on wider screens; use the menu before links get cramped. */
+@media (max-width: 1200px) {
+  .header .nav-desktop { display: none; }
+  .header .hamburger-btn { display: flex; }
+}
 
 @media (max-width: 768px) {
   .nav-desktop { display: none; }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://image.fbviddl.com/sitemap.xml
+Sitemap: https://facebook-image-downloader.fbviddl.com/sitemap.xml
